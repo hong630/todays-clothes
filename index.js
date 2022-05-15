@@ -12,9 +12,9 @@ function test(data){
 
 
 function shareTwitter() {
-    let url = encodeURIComponent('https://glittering-truffle-5a92d6.netlify.app');
-    let title = '됐으면 좋겠다 ^^.';
-    window.open(`https://twitter.com/intent/tweet?url=${url}&text=${title}`,'뽀야미 공유!', 'width=400, height=400');
+    var sendText = "테스트"; // 전달할 텍스트
+    var sendUrl = "https://glittering-truffle-5a92d6.netlify.app/"; // 전달할 URL
+    window.open("https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl);
 }
 
 //https://cards-dev.twitter.com/validator
