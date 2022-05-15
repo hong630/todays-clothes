@@ -12,8 +12,8 @@ function test(data){
 
 
 function shareTwitter() {
-    let url = encodeURIComponent('http://127.0.0.1:8887/index.html');
-    let title = '테스트중이에용';
+    let url = encodeURIComponent('https://glittering-truffle-5a92d6.netlify.app');
+    let title = '됐으면 좋겠다 ^^.';
     window.open(`https://twitter.com/intent/tweet?url=${url}&text=${title}`,'뽀야미 공유!', 'width=400, height=400');
 }
 
