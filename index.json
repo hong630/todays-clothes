@@ -2,51 +2,51 @@
   {
     "id" : "0",
     "p": "운동하는 뽀야미를 보세요",
-    "img": "/img/bboyam_exercise.jpg"
+    "img": "https://glittering-truffle-5a92d6.netlify.app/img/bboyam_exercise.jpg"
   },
   {
     "id" : "1",
     "p": "아이마스크를 한 뽀야미를 보세요",
-    "img": "/img/bboyam_eyemask.jpg"
+    "img": "https://glittering-truffle-5a92d6.netlify.app/img/bboyam_eyemask.jpg"
   },
   {
     "id" : "2",
     "p": "박물관 뽀야미입니다",
-    "img": "/img/bboyam_museum.jpg"
+    "img": "https://glittering-truffle-5a92d6.netlify.app/img/bboyam_museum.jpg"
   },
   {
     "id" : "3",
     "p": "파자마를 입은 뽀야미예요",
-    "img": "/img/bboyam_pajams.jpg"
+    "img": "https://glittering-truffle-5a92d6.netlify.app/img/bboyam_pajams.jpg"
   },
   {
     "id" : "4",
     "p": "비 오는 날의 뽀야미 귀엽죠",
-    "img": "/img/bboyam_rainyday.jpg"
+    "img": "https://glittering-truffle-5a92d6.netlify.app/img/bboyam_rainyday.jpg"
   },
   {
     "id" : "5",
     "p": "천사같은 미소를 가진 뽀야미입니다",
-    "img": "/img/bboyam_smile.jpg"
+    "img": "https://glittering-truffle-5a92d6.netlify.app/img/bboyam_smile.jpg"
   },
   {
     "id" : "6",
     "p": "교복 뽀야미~",
-    "img": "/img/bboyam_uniform.jpg"
+    "img": "https://glittering-truffle-5a92d6.netlify.app/img/bboyam_uniform.jpg"
   },
   {
     "id" : "7",
     "p": "힙한 뽀야미네요",
-    "img": "/img/bboyam_vitaisolana.jpg"
+    "img": "https://glittering-truffle-5a92d6.netlify.app/img/bboyam_vitaisolana.jpg"
   },
   {
     "id" : "8",
     "p": "유카타 입은 뽀야미! 럭키~",
-    "img": "/img/bboyam_yukata.jpg"
+    "img": "https://glittering-truffle-5a92d6.netlify.app/img/bboyam_yukata.jpg"
   },
   {
     "id" : "9",
     "p": "꺅 상큼한 뽀야미! 내 마음도 심쿵~",
-    "img": "/img/bboyam_orange.jpg"
+    "img": "https://glittering-truffle-5a92d6.netlify.app/img/bboyam_orange.jpg"
   }
 ]
