@@ -25,6 +25,7 @@ function App() {
   // 데이터 렌더링
   return (
       <div className="App">
+          안녕
       </div>
   )
 }
