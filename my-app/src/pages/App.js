@@ -1,31 +1,81 @@
 import '../styles/App.css';
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import useSWR from 'swr'
-import fetcher from "../tools/fetcher"
+import {useState} from "react";
 
-
-
-// let weatherUrl ='http://apis.data.go.kr/1360000/WthrChartInfoService'
-//
-// weatherUrl = weatherUrl.toString().trim();
-
-
+function Header(props) {
+    return (
+        <header>
+            <a href="" onClick={
+                function(event) {
+                    event.preventDefault();
+                    props.onChangeMode();
+                }
+            }>{props.title}</a>
+        </header>
+    )
+}
+function Nav(props){
+    const lis = []
+    for(let i=0; i<props.topics.length; i++){
+        let title = props.topics[i].title;
+        let id = props.topics[i].id;
+        let li = <li key={props.topics.id}><a id={id} href="/{id}" onClick={(event)=>{
+            event.preventDefault();
+            props.onChangeMode(Number(event.target.id));
+        }
+        }>{title}</a></li>
+        lis.push(li);
+    }
+    return (<nav>
+        <ul>
+            {lis}
+        </ul>
+    </nav>)
+}
+function Article(props){
+    return(
+        <article>
+            <h2>
+                {props.title}
+            </h2>
+            {props.body}
+        </article>
+    )
+}
 function App() {
-    // let proxy = "http://111.111.111.111/Xr";
-    // let urlHeader = "https://cors-anywhere.herokuapp.com/http://apis.data.go.kr/1360000/WthrChartInfoService";
-    // let queryString = "&serviceKey=TYHtAFxcs6xwlAnl1Ah3Ihb%2FDspt0a8QfvEvIxNGODo4H2ZTbVvayzuzQNTtW6AwaI2Q7i6nSJEcdiuuckEgCQ%3D%3D&pageNo=1&numOfRows=10&dataType=JSON&code=24&time=20220602";
-    // queryString = encodeURI(queryString);
-    // // let url = proxy + "?reqPrx|" + urlHeader + "|" + queryString;
-    // let url =  urlHeader + queryString;
-    // // const xhr = new XMLHttpRequest();
-    // // xhr.open("GET", url);
-    //     const { data, error } = useSWR(url, fetcher)
-    //     console.log(data);
-  // 데이터 렌더링
+    const [mode, setMode] = useState('WELCOME');
+    const [id, setId] = useState(null);
+    const topics = [
+        {id:1, title:"html", body:"html is..."},
+        {id:2, title:"css", body:"css is..."},
+        {id:3, title:"js", body:"js is..."},
+    ]
+    let content = null;
+    if(mode === "WELCOME") {
+        content = <Article title="하이" body="하이요"></Article>
+    }else if(mode === 'READ'){
+        let title, body = null;
+        for(let i=0; i<topics.length;i++){
+            if(topics[i].id === id){
+                title = topics[i].title;
+                body = topics[i].body;
+            }
+        }
+        content =<Article title={title} body={body}></Article>
+    }else if(mode === 'CREATE'){
+        content = <div>어쩌고</div>
+    }
+
   return (
       <div className="App">
-          안녕
+          <Header title="뽀야미" onChangeMode = {function(){
+              setMode('WELCOME')}}></Header>
+          <Nav topics={topics} onChangeMode={(_id)=>{setMode('READ'); setId(_id)}}></Nav>
+          {content}
+          <a href="/create" onClick={(event)=>{
+              event.preventDefault();
+              setMode('CREATE');
+          }}>Create</a>
       </div>
   )
 }
